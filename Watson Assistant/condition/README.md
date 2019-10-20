@@ -34,4 +34,4 @@ As possibilidades de combinações para montar condições são infinitas e, por
 
 Você poderá encontrar mais informações na documentação oficial da IBM [neste](https://cloud.ibm.com/docs/services/assistant?topic=assistant-dialog-build) endereço.
 
-[Voltar](../README.md)
+[Voltar](..)

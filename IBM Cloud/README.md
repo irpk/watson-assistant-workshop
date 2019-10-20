@@ -33,3 +33,5 @@ No final da página, no campo **Service name** informe o nome do serviço confor
 Para finalizar, clique no botão **Create**, localizado à direita, para confirmar o provisionamento do serviço.
 
 ![](ProvisioningWatsonAssistant.gif)
+
+[Explorando o Watson Assistant](Watson\ Assistant)

@@ -132,8 +132,8 @@ Depois de criar o seu primeiro nó não esqueça de fazer um teste!
 
 Nos tópicos a seguir, uma explicação mais detalhada sobre as principais funcionalidades do Watson Assistant.
 
-* [**Condições**](condition/README.md)
-* [**Respostas**](response/README.md)
-* [**Ações**](action/README.md)
+* [**Condições**](condition)
+* [**Respostas**](response)
+* [**Ações**](action)
 
-[Voltar](../README.md)
+[Voltar](..)

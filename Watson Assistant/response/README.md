@@ -67,4 +67,4 @@ Para adicionar um novo tipo de resposta na seção *Assistant responds* acione a
 
 ![](AssistantRespondsCompound.gif)
 
-[Voltar](../README.md)
+[Voltar](..)

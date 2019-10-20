@@ -50,4 +50,4 @@ Quando usamos a opção *Jump to* devemos escolher qual será o comportamento do
 * *If assistant recognizes (condition)*: Pula para o nó de destino somente se a condição desse nó for satisfeita.
 * *Respond*: Pula para o nó de destino e executa a resposta desse nó, independente das condições.
 
-[Voltar](../README.md)
+[Voltar](..)
