@@ -34,4 +34,4 @@ Para finalizar, clique no botão **Create**, localizado à direita, para confirm
 
 ![](ProvisioningWatsonAssistant.gif)
 
-[Explorando o Watson Assistant](../Watson\ Assistant)
+[Explorando o Watson Assistant](../WatsonAssistant)
