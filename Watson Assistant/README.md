@@ -127,3 +127,10 @@ A resposta pode ser escrita em várias linhas, mas para funcionar é necessário
 ![](Creatinganewdialognode.gif)
 
 Depois de criar o seu primeiro nó não esqueça de fazer um teste!
+
+## Explorando o Watson Assistant
+
+Nos tópicos a seguir, uma explicação mais detalhada sobre as principais funcionalidades do Watson Assistant.
+
+* [**Condições**](condition/README.md)
+* [**Respostas**](response/README.md)
