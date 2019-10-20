@@ -96,8 +96,34 @@ O nosso *chatbot* para jogadores de Mortal Kombat 3 será capaz de fornecer as s
 
 Vamos criar nossa primeira intenção. Dentro da nossa *Dialog skill*, selecionamos a opção *Intents*. Na sequência, clique no botão **Create intent** para abrir o formulário de inclusão da inteção.
 
-No campo **Intent name** dê um nome da intenção e acione o botão **Create intent** para confirmar a criação da intenção.
+No campo **Intent name** escreva "personsagens_do_jogo" e acione **Create intent** para confirmar a criação da intenção.
 
 Um novo campo denominado **User example** será habilitado. Nesse campo deve-se colocar exemplos das diferentes formas que os usuários utilizarão para perguntar sobre os personagens do jogo. Insira um exemplo e pressione `ENTER` para confirmar. Quanto mais exemplos, melhor!
 
 ![](Creatinganewintent.gif)
+
+### Criando o diálogo
+
+O diálogo define como o nosso *chatbot* irá se comportar. Para inciar a criação do diálogo, clique na opção **Dialog**. Automaticamente o Watson Assistant irá criar dois nós padrões: o nó "Bem-vindo" e o nó "Em outros casos".
+
+O nó "Bem-vindo" é o primeiro nó executado quando uma nova conversa é iniciada. O nó "Em outros casos" é nó que será acionado sempre que o nosso *chatbot* não for capaz de compreender o usuário.
+
+Que tal fazer um teste? No canto superior direito, clique na opção **Try it**. Será apresentada uma janela de conversação. Escreva alguma coisa e tecle `ENTER` para ver o comportamento do robô.
+
+![](Tryitfirstexample.gif)
+
+Vamos criar nosso primeiro nó de diálogo. Esse nó irá identificar a intenção do usuário de saber quais os personagens do jogo e responderá exibindo a lista de personagens.
+
+Primeiro, selecione o nó "Bem-vindo" e então clique no botão **Add node**. Um novo nó será criado logo abaixo do nó selecionado.
+
+Vamos batizar nosso novo nó como "Personagens do jogo". Logo abaixo do nome do nó, na seção *If assistant recognizes*, definiremos as condições para fazer o *chatbot* entrar nesse nó.
+
+Clicando dentro do campo *Enter condition*, o Watson Assistant exibe os tipos de filtros que podemos aplicar. Vamos usar o filtro `intents`. Na sequência, selecione a intenção `personagens_do_jogo`.
+
+Na seção *Assistant responds* selecione a opção *Text* para indicar que o assistente irá responder com um texto.
+
+A resposta pode ser escrita em várias linhas, mas para funcionar é necessário habilitar a opção *multiline*.
+
+![](Creatinganewdialognode.gif)
+
+Depois de criar o seu primeiro nó não esqueça de fazer um teste!
