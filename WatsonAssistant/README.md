@@ -135,5 +135,10 @@ Nos tópicos a seguir, uma explicação mais detalhada sobre as principais funci
 * [**Condições**](condition)
 * [**Respostas**](response)
 * [**Ações**](action)
+* [**Respostas Múltiplas**](multiple-responses)
+* [**Variáveis de Contexto**](variables)
+* [***Slots***](slots)
+* [**Digressão**](digression)
+* [**Área de testes**](try-it)
 
 [Voltar](..)
