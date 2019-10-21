@@ -2,15 +2,25 @@
 
 Depois de provisionar o serviço **Watson Assistant** estamos prontos para criar o nosso primeiro *chatbot*. Clique no botão **Launch Watson Assistant*
 
+![](Launch-Watson-Assistant.png)
+
 Você será direcionado para uma nova página. Note que à esquerda dessa página temos dois ícones. O primeiro ícone é intitulado *Assistants* e o segundo ícone é intitulado *Skills*.
+
+![](Assistants-and-Skills.png)
 
 *Assistants* são os canais de comunicação que você irá oferecer para os seus usuários conversarem com o seu *chatbot*, ao passo que a *skill* é o cérebro do *chatbot*.
 
 Vamos começar criando uma nova *skill*.
 
 * Clique na opção *Skills*.
+
+  ![](Skills.png)
 * Acione o botão **Create Skill**.
-* Selecione a opção **Dialog Skill** e **Next**.
+
+  ![](Create-skill.png)
+* Selecione a opção **Dialog Skill** e pressione **Next**.
+
+  ![](Dialog-skill.png)
 
 Você pode criar uma nova *skill* do zero (*Create skill*), usar uma *skill* modelo (*Use sample skill*) ou importar uma *skill* já existente.
 
@@ -18,7 +28,7 @@ Vamos criar uma *skill* nova. Portanto, selecione a opção *Create skill*. Dê 
 
 Para finalizar, clique em **Create dialog skill**.
 
-![](CreatinganewDialogSkill.gif)
+![](Create-Dialog-Skill.png)
 
 Tá com preguiça de criar uma *skill* nova? Entre [aqui](https://developer.ibm.com/code/exchanges/bots/) e encontre um *bot* pronto para usar. 😪
 
@@ -28,6 +38,8 @@ Uma *skill* é seperada em três importantes seções:
 * *Entities*: São as entidades da *skill*. Entidades são análogas a substantivos da língua portuguesa.
 * *Dialog*: Árvore de diálogo do *bot*. Aqui nós definimos as respostas e decisões do *bot* de acordo com a entrada do usuário.
 
+![](Intents-Entitties-Dialog.png)
+
 ## Projetando um *chatbot*
 
 Quando projetamos um *chatbot* temos que considerar algumas premissas:
@@ -36,7 +48,7 @@ Quando projetamos um *chatbot* temos que considerar algumas premissas:
 2. Um *chatbot* deve ser projetado para responder questões simples e triviais, reduzindo a carga de trabalho do ser-humano.
 3. Um *chatbot* sempre pode melhorar, mas deve sempre se manter dentro do domínio de negócio da sua proposta inicial.
 4. Um *chatbot* deve estar preparado para dar vazão às questões não respondidas, encaminhando-as para um ser-humano.
-5. O usuário deve saber que está falando com um *chabot* para evitar frustrações.
+5. O usuário deve saber que está falando com um *chabot*, evitando frustrações e expectativas elevadas.
 
 Um *chatbot* eficiente é aquele que consegue, com alto percentual de assertividade, responder um conjunto de questões recorrentes e de baixa complexidade. Esse conjunto de questões também é conhecido como cauda curta.
 
@@ -66,15 +78,19 @@ Podemos comparar as entidades com os substantivos da língua portuguesa. Portant
 * **Movimento**: Tipos de movimento, que podem ser combos, especiais, *fatalities*, *animalities*, *babalities* ou *friendships*.
 * **Menus secretos**: Os tipos de menu secreto do jogo.
 
-Vamos criar nossa primeira entidade. Entre na sua *skill* e selecione a opção **Entities**. Clique em **Create entity** para criar uma nova entidade. Informe o nome da entidade como `personagem` e pressione **Create entity** para confirmar.
+Vamos criar nossa primeira entidade. Entre na sua *skill* e selecione a opção **Entities**. Clique em **Create entity** para criar uma nova entidade.
 
-Agora, vamos criar os valores da nossa entidade. Cada personagem será um valor da entidade. Por exemplo, no campo valor informe `Cyrax` e depois selecione a opção *Synonyms* para indicar que este é um valor do tipo sinônimo.
+![](Create-entity.png)
 
-No campo **synonyms** informe todos os sinônimos da palavra `Cyrax`, isto é, as diferentes formas que as pessoas usarão para se referir ao personagem Cyrax.
+Informe o nome da entidade como `personagem` e pressione **Create entity** para confirmar.
 
-![](SynonymEntitySample.png)
+![](Create-new-entity.png)
 
-![Como criar uma entidade com sinônimos](Creatingasynonymentity.gif)
+Agora, vamos criar os valores da nossa entidade. Cada personagem será um valor da entidade. Por exemplo, no campo **Value** informe `Cyrax` e depois selecione a opção **Synonyms** para indicar que este é um valor do tipo sinônimo.
+
+No campo **Synonyms** informe todos os sinônimos da palavra `Cyrax`, isto é, as diferentes formas que as pessoas usarão para se referir ao personagem Cyrax.
+
+![](Add-value.png)
 
 ### Definindo as intenções
 
@@ -94,37 +110,55 @@ O nosso *chatbot* para jogadores de Mortal Kombat 3 será capaz de fornecer as s
 * Como habilitar um personagem secreto.
 * Como habilitar um *Kombat Kode*.
 
-Vamos criar nossa primeira intenção. Dentro da nossa *Dialog skill*, selecionamos a opção *Intents*. Na sequência, clique no botão **Create intent** para abrir o formulário de inclusão da inteção.
+Vamos criar nossa primeira intenção. Dentro da nossa *Dialog skill*, selecionamos a opção **Intents**. Na sequência, clique no botão **Create intent** para abrir o formulário de inclusão da intenção.
 
-No campo **Intent name** escreva "personsagens_do_jogo" e acione **Create intent** para confirmar a criação da intenção.
+![](Create-intent.png)
+
+No campo **Intent name** escreva `personsagens_do_jogo` e acione **Create intent** para confirmar a criação da intenção.
+
+![](Create-intent-form.png)
 
 Um novo campo denominado **User example** será habilitado. Nesse campo deve-se colocar exemplos das diferentes formas que os usuários utilizarão para perguntar sobre os personagens do jogo. Insira um exemplo e pressione `ENTER` para confirmar. Quanto mais exemplos, melhor!
 
-![](Creatinganewintent.gif)
+![](User-examples.png)
 
 ### Criando o diálogo
 
-O diálogo define como o nosso *chatbot* irá se comportar. Para inciar a criação do diálogo, clique na opção **Dialog**. Automaticamente o Watson Assistant irá criar dois nós padrões: o nó "Bem-vindo" e o nó "Em outros casos".
+O diálogo define como o nosso *chatbot* irá se comportar. Para inciar a criação do diálogo, clique na opção **Dialog**. Automaticamente o Watson Assistant irá criar dois nós padrões: o nó `Bem-vindo` e o nó `Em outros casos`.
 
-O nó "Bem-vindo" é o primeiro nó executado quando uma nova conversa é iniciada. O nó "Em outros casos" é nó que será acionado sempre que o nosso *chatbot* não for capaz de compreender o usuário.
+![](Dialog.png)
+
+O nó `Bem-vindo` é o primeiro nó executado quando uma nova conversa é iniciada. O nó `Em outros casos` é nó que será acionado sempre que o nosso *chatbot* não for capaz de compreender o usuário.
 
 Que tal fazer um teste? No canto superior direito, clique na opção **Try it**. Será apresentada uma janela de conversação. Escreva alguma coisa e tecle `ENTER` para ver o comportamento do robô.
 
-![](Tryitfirstexample.gif)
+![](Try-it.png)
+![](Try-it-example.png)
 
 Vamos criar nosso primeiro nó de diálogo. Esse nó irá identificar a intenção do usuário de saber quais os personagens do jogo e responderá exibindo a lista de personagens.
 
-Primeiro, selecione o nó "Bem-vindo" e então clique no botão **Add node**. Um novo nó será criado logo abaixo do nó selecionado.
+Primeiro, selecione o nó `Bem-vindo` e então clique no botão **Add node**. Um novo nó será criado logo abaixo do nó selecionado.
 
-Vamos batizar nosso novo nó como "Personagens do jogo". Logo abaixo do nome do nó, na seção *If assistant recognizes*, definiremos as condições para fazer o *chatbot* entrar nesse nó.
+![](Add-node.png)
 
-Clicando dentro do campo *Enter condition*, o Watson Assistant exibe os tipos de filtros que podemos aplicar. Vamos usar o filtro `intents`. Na sequência, selecione a intenção `personagens_do_jogo`.
+Vamos batizar nosso novo nó como `Personagens do jogo`.
 
-Na seção *Assistant responds* selecione a opção *Text* para indicar que o assistente irá responder com um texto.
+![](Node-name.png)
 
-A resposta pode ser escrita em várias linhas, mas para funcionar é necessário habilitar a opção *multiline*.
+Logo abaixo do nome do nó, na seção **If assistant recognizes**, definiremos as condições para fazer o *chatbot* entrar nesse nó.
 
-![](Creatinganewdialognode.gif)
+Clicando dentro do campo **Enter condition**, o Watson Assistant exibe os tipos de filtros que podemos aplicar. Vamos usar o filtro `intents`. Na sequência, selecione a intenção `personagens_do_jogo`.
+
+![](If-assistant-recognizes.png)
+![](If-assistant-recognizes-intent.png)
+
+Na seção **Assistant responds** selecione a opção **Text** para indicar que o assistente irá responder com um texto.
+
+![](Assistant-responds-text.png)
+
+A resposta pode ser escrita em várias linhas, mas para funcionar é necessário habilitar a opção **multiline**.
+
+![](Assistant-responds-multline.png)
 
 Depois de criar o seu primeiro nó não esqueça de fazer um teste!
 
