@@ -58,3 +58,7 @@ Depois de coletar todas as informações o assistente exibe um resumo do pedido.
 ![](FinishNodeExample.png)
 
 Vamos fazer alguns testes.
+
+![](SlotsExample.gif)
+
+[Voltar](../)
