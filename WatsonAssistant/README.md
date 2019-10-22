@@ -174,5 +174,6 @@ Nos tópicos a seguir, uma explicação mais detalhada sobre as principais funci
 * [***Slots***](slots)
 * [**Digressão**](digression)
 * [**Área de testes**](try-it)
+* [**Integrações**](integrations)
 
 [Voltar](..)
