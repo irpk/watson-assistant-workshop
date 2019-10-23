@@ -16,5 +16,6 @@ Esta série de documentos têm por objetivo guiar o leitor na construção do se
   - [Integrações](WatsonAssistant/integrations)
     - [Facebook](WatsonAssistant/integrations/facebook)
     - [Slack](WatsonAssistant/integrations/slack)
+    - [Telegram](WatsonAssistant/integrations/telegram)
     - [Website](WatsonAssistant/integrations/website)
     - [*Voice Agent*](WatsonAssistant/integrations/voice-agent)
