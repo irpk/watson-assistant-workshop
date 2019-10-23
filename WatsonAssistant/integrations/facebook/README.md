@@ -35,8 +35,8 @@ Uma nova janela será apresentada. Forneça um nome para o aplicativo, um e-mail
 
 Após concluir a criação do aplicativo você será direcionado para o painel de configuração. Agora, precisamos copiar a **Chave secreta do aplicativo**:
 
-* No menu de navegação, selecione **Configuração** > **Básico**
-* No formulário, dentro do campo **Chave Secreta do Aplicativo**, acione o botão **Mostrar**
+* No menu de navegação, selecione **Configuração** > **Básico**.
+* No formulário, dentro do campo **Chave Secreta do Aplicativo**, acione o botão **Mostrar**.
 * Copie a chave do aplicativo.
 
 ![](copy-app-secret.png)
@@ -51,40 +51,40 @@ Retorne à plataforma IBM Watson Assistant, na página de configuração da inte
 
 Antes de começar esta etapa, certifique de que você já possui uma página do Facebook criada. Se você ainda não tem uma página, siga os passos:
 
-* Na barra de ferramentas do Facebook, clique em **Criar** e selecione a opção **Página**
+* Na barra de ferramentas do Facebook, clique em **Criar** e selecione a opção **Página**.
 
   ![](facebook-create-page.png)
-* Na etapa seguinte, selecione o tipo de página desejado, que pode ser **Negócio ou marca** ou **Comunidade ou figura pública**
+* Na etapa seguinte, selecione o tipo de página desejado, que pode ser **Negócio ou marca** ou **Comunidade ou figura pública**.
 
   ![](facebook-select-page-type.png)
-* Preencha o formulário de criação da página e clique em **Continuar** para prosseguir
+* Preencha o formulário de criação da página e clique em **Continuar** para prosseguir.
 
   ![](facebook-create-page-form.png)
-* Se desejar, você pode adicionar uma foto de perfil à nova página
+* Se desejar, você pode adicionar uma foto de perfil à nova página.
 
   ![](facebook-page-profile-picture.png)
 
 Agora que temos nossa página criada, podemos executar os próximos passos.
 
-* No painel do aplicativo no Facebook, clique no sinal **+** ao lado da opção **Produtos** localizado no menu de navegação
+* No painel do aplicativo no Facebook, clique no sinal **+** ao lado da opção **Produtos** localizado no menu de navegação.
 
   ![](add-product.png)
-* Localize o produto **Messenger** e clique no botão **Configurar**
+* Localize o produto **Messenger** e clique no botão **Configurar**.
 
   ![](add-messenger.png)
-* Na página de configuração do **Messenger**, na seção **Tokens de acesso**, clique em **Adicionar ou remover Páginas**
+* Na página de configuração do **Messenger**, na seção **Tokens de acesso**, clique em **Adicionar ou remover Páginas**.
 
   ![](add-page-to-messenger.png)
-* O Facebook irá solicitar sua autorização para dar sequência ao processo de integração da página com o aplicativo
+* O Facebook irá solicitar sua autorização para dar sequência ao processo de integração da página com o aplicativo.
 
   ![](select-page-authorize.png)
-* Na sequência, selecione a página que será usada para responder os usuários automaticamente usando o Watson Assistant e clique em **Avançar**
+* Na sequência, selecione a página que será usada para responder os usuários automaticamente usando o Watson Assistant e clique em **Avançar**.
 
   ![](facebook-select-page.png)
-* Mantenha a opção **Gerencie e acesse as conversas da Página no Messenger** e clique em **Concluir** para finalizar
+* Mantenha a opção **Gerencie e acesse as conversas da Página no Messenger** e clique em **Concluir** para finalizar.
 
   ![](facebook-select-page-finish.png)
-* Se tudo correr bem, você verá uma mensagem como esta
+* Se tudo correr bem, você verá uma mensagem como esta.
 
   ![](facebook-select-page-ok.png)
 
@@ -112,15 +112,15 @@ Primeiro, na plataform IBM Watson Assistant, clique em **Generate callback URL**
 
 Depois de gerar a URL de *callback*, siga os passos.
 
-* Na página de configuração do Facebook Messenger, na seção **Webhooks**, clique em **Adicionar URL de retorno**
+* Na página de configuração do Facebook Messenger, na seção **Webhooks**, clique em **Adicionar URL de retorno**.
 
   ![](facebook-add-callback-url.png)
-* No campo **URL de retorno de chamada** cole a URL gerada na plataforma IBM
-* No campo **Verificar token** cole o **Generated verify token**, disponibilizado na seção **Step 2** do Watson Assistant
-* Clique em **Verificar e salvar** para concluir
+* No campo **URL de retorno de chamada** cole a URL gerada na plataforma IBM.
+* No campo **Verificar token** cole o **Generated verify token**, disponibilizado na seção **Step 2** do Watson Assistant.
+* Clique em **Verificar e salvar** para concluir.
 
   ![](facebook-setup-callback-url.png)
-* Clique em **Adicionar assinaturas**, marque as opções **messages** e **messaging_postbacks**; clique em **Salvar** para concluir
+* Clique em **Adicionar assinaturas**, marque as opções **messages** e **messaging_postbacks**; clique em **Salvar** para concluir.
 
   ![](facebook-add-signatures.png)
   ![](facebook-setup-signatures.png)

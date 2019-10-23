@@ -24,31 +24,31 @@ A imagem abaixo foi extraída da [documentação oficial](https://cloud.ibm.com/
 
 Na plataforma Watson Assistant:
 
-* Acesse a seção **Assistants**
+* Acesse a seção **Assistants**.
 
   ![](assistants.png)
-* Selecione o assistente desejado
+* Selecione o assistente desejado.
 
   ![](select-assistant.png)
-* Acione o botão **Add integration**
+* Acione o botão **Add integration**.
 
   ![](add-integration.png)
-* Selecione a opção **Voice Agent (Telephony)**
+* Selecione a opção **Voice Agent (Telephony)**.
 
   ![](voice-agent.png)
 
 Você será redirecionado para uma página para realizar o provisionamento do serviço **Voice Agent with Watson**.
 
-* Selecione a região onde o serviço será provisionado
+* Selecione a região onde o serviço será provisionado.
 
   ![](select-region.png)
-* Mantenha o plano **Lite** selecionado
+* Mantenha o plano **Lite** selecionado.
 
   ![](select-a-pricing-plan.png)
-* Na parte inferior da página, batize o seu serviço
+* Na parte inferior da página, batize o seu serviço.
 
   ![](service-name.png)
-* Para concluir, clique em **Create**, localizado no painel à direita
+* Para concluir, clique em **Create**, localizado no painel à direita.
 
   ![](create.png)
 
@@ -69,16 +69,16 @@ Neste tutorial vamos usar o Twillio.
 * Preencha o formulário de cadastro e clique em **Start your free trial**
 
   ![](twillio-sign-up.png)
-* Verifica a caixa de entrada do seu e-mail para concluir o processo de criação da conta no Twillio
+* Verifica a caixa de entrada do seu e-mail para concluir o processo de criação da conta no Twillio.
 
   ![](confirm-your-email.png)
-* Informe um número de telefone válido para confirmar a sua conta
+* Informe um número de telefone válido para confirmar a sua conta.
 
   ![](verify-phone-number.png)
-* Um código de verificação será enviado para o telefone informado. Entre com esse código e clique em **Submit** para avançar
+* Um código de verificação será enviado para o telefone informado. Entre com esse código e clique em **Submit** para avançar.
 
   ![](verification-code.png)
-* Siga os passos para concluir a criação da conta
+* Siga os passos para concluir a criação da conta.
 
 Após finalizar a criação da conta, você será direcionado para o painel do Twillio. Clique no botão **Get a Trial Number** para obter um número de testes com $15.50 de crédito.
 
@@ -86,38 +86,38 @@ Após finalizar a criação da conta, você será direcionado para o painel do T
 
 Agora vamos criar um *SIP Trunk*.
 
-* No menu lateral do Twillio, clique no símbolo **...** para abrir o menu completo
+* No menu lateral do Twillio, clique no símbolo **...** para abrir o menu completo.
 
   ![](twillio-main-menu.png)
-* No menu principal, selecione a opção **Elastic SIP Trunking**
+* No menu principal, selecione a opção **Elastic SIP Trunking**.
 
   ![](elastic-sip-trunking.png)
-* Na barra de navegação selecione a opção **Trunks**
+* Na barra de navegação selecione a opção **Trunks**.
 
   ![](trunks.png)
-* Clique no botão **Create new SIP Trunk**
+* Clique no botão **Create new SIP Trunk**.
 
   ![](create-new-sip-trunk.png)
-* Dê um novo amigável para o seu *SIP Trunk* e clique em **Create**
+* Dê um novo amigável para o seu *SIP Trunk* e clique em **Create**.
 
   ![](create-a-new-sip-trunk.png)
-* Uma nova barra de navegação com as opções do novo *SIP Trunk* será exibida. Selecione a opção **Origination**
+* Uma nova barra de navegação com as opções do novo *SIP Trunk* será exibida. Selecione a opção **Origination**.
 
   ![](origination.png)
-* Clique no botão **Add new Origination URI**
+* Clique no botão **Add new Origination URI**.
 
   ![](add-new-origination-uri.png)
-* No campo **ORIGINATION SIP URI**, cole a URI disponibilizada no campo **Your agent endpoint**, na página de configuração do **Voice Agent with Watson**
+* No campo **ORIGINATION SIP URI**, cole a URI disponibilizada no campo **Your agent endpoint**, na página de configuração do **Voice Agent with Watson**.
 
   ![](your-agent-endpoint.png)
   ![](add-origination-url.png)
-* Na barra de opções do *SIP Trunk*, selecione a opção **Numbers**
+* Na barra de opções do *SIP Trunk*, selecione a opção **Numbers**.
 
   ![](numbers.png)
-* Clique no botão **Add an Existing Number**
+* Clique no botão **Add an Existing Number**.
 
   ![](add-an-existing-number.png)
-* Na janela, selecione o número *trial* que criamos anteriormente e clique em **Add Selected** para concluir
+* Na janela, selecione o número *trial* que criamos anteriormente e clique em **Add Selected** para concluir.
 
   ![](add-an-number.png)
 
@@ -132,22 +132,22 @@ Você será direcionado para um formulário de configuração do agente de voz.
 * **Agent Type**: Selecione a opção **Voice**.
 * **Name**: Dê um nome para o seu agente.
 * **Phone number(s)**.
-  * Clique em **Manage**
+  * Clique em **Manage**.
 
     ![](manage-phone-number.png)
-  * Clique no símbolo **+** para incluir um número
+  * Clique no símbolo **+** para incluir um número.
 
     ![](add-phone-number.png)
-  * Informe o número de telefone *trial* fornecido pelo Twillio
+  * Informe o número de telefone *trial* fornecido pelo Twillio.
 
     ![](insert-phone-number.png)
-  * Confirme a inclusão do número
+  * Confirme a inclusão do número.
 
     ![](save-phone-number.png)
-  * Selecione o novo número incluído
+  * Selecione o novo número incluído.
 
     ![](select-number.png)
-  * Clique em **Done** para concluir
+  * Clique em **Done** para concluir.
 
     ![](done.png)
 
@@ -187,5 +187,97 @@ Clique em **Save changes** para concluir.
 Pegue o seu telefone e faça uma ligação para o número de telefone *trial* fornecido pelo Twillio.
 
 ![](https://media.giphy.com/media/DKnMqdm9i980E/giphy.gif)
+
+## Usando o Google para converter texto pra voz e vice-versa
+
+O Voice Agent with Watson também permite que você utilize os serviços do Google para realizar a conversão de fala para texto e texto para fala.
+
+Primeiro, precisamos criar esses serviços na plataforma do Google.
+
+### Provisionando o Google Cloud Speech-to-Text API
+
+Antes de começar, certifique-se que você está conectado no Google. Depois, acesse [este](https://console.cloud.google.com) endereço.
+
+* Na barra de busca, procure e selecione **Cloud Speech-to-Text API**.
+
+  ![](found-cloud-speech-to-text-api.png)
+* Depois, clique em **ATIVAR** para ativar o serviço.
+
+  ![](cloud-speech-to-text-api-activate.png)
+* Após ativar a API, na barra de navegação, selecione a opção **Credenciais**.
+* Clique em **CRIAR CREDENCIAIS** para criar uma nova credencial.
+* Selecione a opção **Conta de serviço**.
+
+  ![](create-credential.png)
+* No formulário, preencha o campo **Nome da conta de serviço** e clique em **CRIAR** para avançar.
+
+  ![](credential-step-1.png)
+* A próxima etapa é opcional. Clique em **CONTINUAR** para avançar.
+
+  ![](credential-step-2.png)
+* Na última etapa do formulário de geração da credencial, acione o botão **CRIAR CHAVE**.
+
+  ![](credential-step-3-create-key.png)
+* Um painel lateral será exibido à direita. Selecione o tipo **JSON** e clique em **CRIAR**.
+
+  ![](credential-step-3-create-key-json.png)
+* Um arquivo com as credencials será criado e armazenado no seu computador.
+
+  ![](credentials-download.png)
+* Copie a chave gerada e clique em **CONCLUIR** para finalizar.
+
+  ![](credential-step-3.png)
+
+### Provisionando o Google Cloud Text-to-Speech API
+
+* Na barra de busca, procure e selecione **Cloud Text-to-Speech API**.
+
+  ![](found-cloud-text-to-speech-api.png)
+* Depois, clique em **ATIVAR** para ativar o serviço.
+
+  ![](cloud-text-to-speech-activate.png)
+* Após ativar a API, na barra de navegação, selecione a opção **Credenciais**.
+* Clique em **CRIAR CREDENCIAIS** para criar uma nova credencial.
+* Selecione a opção **Conta de serviço**.
+
+  ![](create-credential-tts.png)
+* No formulário, preencha o campo **Nome da conta de serviço** e clique em **CRIAR** para avançar.
+
+  ![](credential-step-1-tts.png)
+* A próxima etapa é opcional. Clique em **CONTINUAR** para avançar.
+
+  ![](credential-step-2-tts.png)
+* Na última etapa do formulário de geração da credencial, acione o botão **CRIAR CHAVE**.
+
+  ![](credential-step-3-create-key-tts.png)
+* Um painel lateral será exibido à direita. Selecione o tipo **JSON** e clique em **CRIAR**.
+
+  ![](credential-step-3-create-key-json-tts.png)
+* Um arquivo com as credencials será criado e armazenado no seu computador.
+
+  ![](credentials-download-tts.png)
+* Copie a chave gerada e clique em **CONCLUIR** para finalizar.
+
+  ![](credential-step-3-tts.png)
+
+## Configurando o Voice Agent with Watson com o Google
+
+* Na página de configuração do Voice Agent with Watson, acesse a opção **Manage** no menu de navegação.
+
+  ![](voice-agent-manage.png)
+* Na seção **Speech to Text**:
+  * **Service type**: Selecione **Google Speech to Text service instance**.
+  * **Language**: Selecione **Portuguese**.
+  * **Language region**: Selecione **Brazil**.
+  * **Credentials**: Cole a chave da API **Cloud Speech-to-Text**, armazenada no arquivo JSON.
+  
+    ![](speech-to-text-settings.png)
+* Na seção **Text to Speech**:
+  * **Service type**: Selecione **Google Text to Speech service instance**.
+  * **Language**: Selecione **Portuguese (Brazil)**.
+  * **Voice**: Selecione **pt-BR-Standard-A: Standard - FEMALE**.
+  * **Credentials**: Cole a chave da API **Cloud Text-to-Speech**, armazenada no arquivo JSON.
+
+    ![](text-to-speech-settings.png)
 
 [Voltar](../)

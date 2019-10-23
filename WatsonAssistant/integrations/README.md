@@ -6,14 +6,15 @@ Até o momento nós apenas treinamos o nosso assistente virtual. A partir desse 
 * [Slack](slack)
 * Intercom
 * [Voice Agent](voice-agent)
+* [Telegram](telegram)
 * WordPress plug-in
 
 Antes de criar uma nova integração, precisamos primeiro criar um novo assistente.
 
-* Na plataforma IBM Watson Assistente, selecione a opção **Assistants** no menu lateral
+* Na plataforma IBM Watson Assistente, selecione a opção **Assistants** no menu lateral.
 
   ![](assistants.png)
-* Clique em **Create assistant** para criar um novo assistente
+* Clique em **Create assistant** para criar um novo assistente.
 
   ![](create-assistant.png)
 * Preencha o formulário, mantenha a opção **Enable Preview Link** habilitada e clique em **Create assistant**.

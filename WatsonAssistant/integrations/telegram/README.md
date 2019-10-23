@@ -287,4 +287,6 @@ Agora é só iniciar a conversa e testar!
 
 ![](telegram-test.png)
 
+![](https://media.giphy.com/media/1xmDpBG7JMjm7KLOsW/giphy.gif)
+
 [Voltar](../)
