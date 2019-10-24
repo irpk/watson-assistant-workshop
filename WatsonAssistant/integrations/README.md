@@ -39,4 +39,13 @@ Clique no link para realizar testes no seu novo assistente virtual.
 
 ![](preview-link-test.png)
 
+## Outras integrações
+
+Use os tutoriais abaixo para explorar as demais opções de integração.
+
+* [Facebook Messenger](facebook)
+* [Slack](slack)
+* [Voice Agent](voice-agent)
+* [Telegram](telegram)
+
 [Voltar](../)

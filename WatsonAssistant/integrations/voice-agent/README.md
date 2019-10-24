@@ -224,7 +224,7 @@ Antes de começar, certifique-se que você está conectado no Google. Depois, ac
 * Um arquivo com as credencials será criado e armazenado no seu computador.
 
   ![](credentials-download.png)
-* Copie a chave gerada e clique em **CONCLUIR** para finalizar.
+* Guarde bem esse arquivo e clique em **CONCLUIR** para finalizar.
 
   ![](credential-step-3.png)
 
@@ -256,7 +256,7 @@ Antes de começar, certifique-se que você está conectado no Google. Depois, ac
 * Um arquivo com as credencials será criado e armazenado no seu computador.
 
   ![](credentials-download-tts.png)
-* Copie a chave gerada e clique em **CONCLUIR** para finalizar.
+* Guarde bem esse arquivo e clique em **CONCLUIR** para finalizar.
 
   ![](credential-step-3-tts.png)
 
@@ -279,5 +279,11 @@ Antes de começar, certifique-se que você está conectado no Google. Depois, ac
   * **Credentials**: Cole a chave da API **Cloud Text-to-Speech**, armazenada no arquivo JSON.
 
     ![](text-to-speech-settings.png)
+
+### Testando
+
+Você perceberá que o reconhecimento de voz do Google é mais preciso que o reconhecimento de voz da IBM.
+
+![](https://media.giphy.com/media/DND2SjhEvylW0/giphy.gif)
 
 [Voltar](../)
