@@ -1,0 +1,343 @@
+{
+  "name": "Forecast",
+  "intents": [
+    {
+      "intent": "previsao_tempo",
+      "examples": [
+        {
+          "text": "como está o tempo"
+        },
+        {
+          "text": "qual a temperatura agora"
+        },
+        {
+          "text": "qual a temperatura"
+        },
+        {
+          "text": "qual a temp"
+        },
+        {
+          "text": "qual a temp agora"
+        },
+        {
+          "text": "temperatura agora"
+        },
+        {
+          "text": "tá muito quente agora"
+        },
+        {
+          "text": "tá muito quente em"
+        },
+        {
+          "text": "quantos graus ta agora"
+        },
+        {
+          "text": "quantos graus ta fazendo agora"
+        },
+        {
+          "text": "o ceu ta nublado"
+        },
+        {
+          "text": "ta chovendo"
+        },
+        {
+          "text": "ta chovendo agora"
+        },
+        {
+          "text": "o ceu ta aberto"
+        },
+        {
+          "text": "o tempo ta fechado"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "cidade",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Brusque",
+          "synonyms": [
+            "bruxque"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Timbó",
+          "synonyms": [
+            "timbo"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Blumenau",
+          "synonyms": [
+            "blumenal",
+            "bnu"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Indaial",
+          "synonyms": [
+            "indaiau"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Pomerode",
+          "synonyms": [
+            "pomeroda"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Gaspar",
+          "synonyms": [
+            "gaxpar"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "language": "pt-br",
+  "metadata": {
+    "api_version": {
+      "major_version": "v1",
+      "minor_version": "2018-09-20"
+    }
+  },
+  "skill_id": "c1a25e6c-f3cf-479e-a9b0-760971620fbc",
+  "webhooks": [
+    {
+      "url": "https://mortal-kombot-3.us-south.cf.appdomain.cloud/forecast",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ocorreu um erro. Tente novamente mais tarde."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_9_1572354678951",
+      "conditions": "anything_else",
+      "dialog_node": "response_5_1572354960528",
+      "previous_sibling": "response_10_1572354958818"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "$result.detail."
+              },
+              {
+                "text": "Temperatura: $result.tempc graus."
+              },
+              {
+                "text": "Temperatura mínima: $result.temp_minc graus."
+              },
+              {
+                "text": "Temperatura máxima: $result.temp_maxc graus."
+              },
+              {
+                "text": "Humidade relativa do ar: $result.humidity %."
+              },
+              {
+                "text": "Velocidade do vento: $result.windspeed km/h"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_9_1572354678951",
+      "conditions": "$result",
+      "dialog_node": "response_10_1572354958818"
+    },
+    {
+      "type": "event_handler",
+      "title": "handler_7_1572353904644",
+      "output": {
+        "text": {
+          "values": [
+            "Em qual cidade?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_1_1572353904634",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1572353904644",
+      "previous_sibling": "handler_4_1572353904644"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Cidade não disponível. Tente outra cidade."
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_1_1572353904634",
+      "conditions": "@cidade",
+      "event_name": "nomatch",
+      "dialog_node": "handler_7_1572353934236",
+      "previous_sibling": "handler_7_1572353904644"
+    },
+    {
+      "type": "event_handler",
+      "title": "handler_4_1572353904644",
+      "output": {},
+      "parent": "slot_1_1572353904634",
+      "context": {
+        "cidade": "@cidade"
+      },
+      "conditions": "@cidade",
+      "event_name": "input",
+      "dialog_node": "handler_4_1572353904644"
+    },
+    {
+      "type": "slot",
+      "title": "slot_1_1572353904634",
+      "output": {},
+      "parent": "node_4_1572353884301",
+      "variable": "$cidade",
+      "dialog_node": "slot_1_1572353904634",
+      "previous_sibling": "node_9_1572354678951"
+    },
+    {
+      "type": "standard",
+      "title": "Consultar clima",
+      "parent": "node_4_1572353884301",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "city": "<? $cidade ?>",
+            "country": "br"
+          },
+          "result_variable": "result"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "true",
+      "dialog_node": "node_9_1572354678951"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_4_1572353884301"
+    },
+    {
+      "type": "frame",
+      "title": "Previsão do tempo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Aguarde enquanto eu pesquiso o clima em $cidade..."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "skip_user_input"
+      },
+      "conditions": "#previsao_tempo",
+      "dialog_node": "node_4_1572353884301",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá. Como posso te ajudar?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Bem-vindo"
+    }
+  ],
+  "workspace_id": "c1a25e6c-f3cf-479e-a9b0-760971620fbc",
+  "counterexamples": [],
+  "system_settings": {
+    "tooling": {
+      "store_generic_responses": true
+    },
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "none_of_the_above_prompt": "Nenhuma das anteriores"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "status": "Available"
+}
